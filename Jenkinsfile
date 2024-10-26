@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    
+
         stage('stage1') {
             when {
                 branch 'production'
@@ -10,11 +10,9 @@ pipeline {
                 echo 'Deploying'
             }
         }
-
-                stage('stage2') {
+        stage('stage2') {
             steps {
                 echo 'Deploying'
             }
         }
     }
-}
