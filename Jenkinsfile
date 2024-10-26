@@ -1,7 +1,7 @@
 pipeline {
     agent any
-
-        stage('stage1') {
+    stages {
+       stage('stage1') {
             when {
                 branch 'production'
                 environment name: 'DEPLOY_TO', value: 'production'
@@ -16,3 +16,5 @@ pipeline {
             }
         }
     }
+
+}
